@@ -1,0 +1,98 @@
+{% import "bootstrap/wtf.html" as wtf %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Student Registration App</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script>
+	$(function() {
+		$( ".dtpick" ).datepicker();
+	});
+	</script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li role="presentation" class="active"><a href="/">Home</a>
+                    </li>
+
+                </ul>
+            </nav>
+            <h3 class="text-muted">Student Registration App</h3>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-md-offset-4">
+<div class="panel panel-primary">
+  <div class="panel-heading">Update Profile</div>
+  <div class="panel-body">
+
+
+<form action="/profile" method="POST">
+    {{ form.hidden_tag() }}
+
+{% with msgs = get_flashed_messages() %}
+        {% if msgs %}
+          {%- for msg in msgs %}
+            <div class="alert alert-info">
+              {{ msg }}
+            </div>
+          {% endfor -%}
+        {% endif %}
+      {% endwith %}
+
+        <div class="form-group has-feedback">
+             {{ wtf.form_field(form.fname) }}
+	</div>
+        <div class="form-group has-feedback">
+             {{ wtf.form_field(form.lname) }}
+	</div>
+        <div class="form-group has-feedback">
+             {{ wtf.form_field(form.roll) }}
+	</div>
+        <div class="form-group has-feedback">
+             {{ wtf.form_field(form.phone) }}
+	</div>
+        <div class="form-group has-feedback">
+             {{ wtf.form_field(form.addr) }}
+	</div>
+        <div class="form-group has-feedback">
+             {{ wtf.form_field(form.pin) }}
+	</div>
+        <div class="form-group has-feedback">
+             {{ wtf.form_field(form.city) }}
+	</div>
+        <div class="form-group has-feedback">
+             {{ wtf.form_field(form.birthdate,class='dtpick' ) }}
+	</div>
+        <div class="form-group has-feedback">
+             {{ wtf.form_field(form.pname) }}
+	</div>
+        <div class="form-group has-feedback">
+             {{ wtf.form_field(form.pnum) }}
+	</div>
+
+    <center>
+<input class="btn btn-primary" type="submit" value="Update Profile" />
+    </center>
+</form>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+</html>
