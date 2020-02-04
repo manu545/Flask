@@ -1,4 +1,4 @@
-#Platform assignment
+# Platform assignment
 
 This tool helps user to find out which train comes on to which platform if an invalid train detail is entered,
 then an error will be shown on screen.
