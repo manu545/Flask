@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+.rounded {
+  border-radius: 5px;
+
+   // without a background or border applied you won't be able to see if its rounded
+}
+</style>
+
+{%if ch==1 %}
+
+  <div class="alert alert-danger">
+   Please enter correct train details
+  </div>
+{%endif%}
+
+
+
+{%if ch==0 %}
+        <div class="container">
+  <h2>Train details</h2>
+    <div class="btn-group">
+          </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Train Number</th>
+          <th>Train Name</th>
+        <th>Platform Number</th>
+        <th>Time</th>
+
+      </tr>
+    </thead>
+   <tbody>
+       <tr>
+        <td>{{ tnum }}</td>
+        <td>{{ tname}}</td>
+        <td>{{ platform }}</td>
+          <td>{{time}}</td>
+
+       </tr>
+   </tbody>
+  </table>
+        </div>
+{%endif%}
+
+<div class="container">
+<a href="/" class="btn btn-primary">home</a>
+    </div>
+</html>
+

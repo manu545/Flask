@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+       <form action="/search" method="POST">
+           {% if ch==1 %}
+
+ <script>
+    alert("Train number doesnot exist");
+</script>
+{%endif%}
+
+	<div class="login">
+		<div class="login-screen">
+			<div class="app-title">
+				<h1>Platform Assignment</h1>
+			</div>
+
+			<div class="login-form">
+				<div class="control-group">
+				<input type="text" class="login-field" value="" placeholder="Train number" name="usern">
+                    <label class="login-field-icon fui-user" ></label>
+
+				</div>
+                 <div class="control-group">
+                   <input type="submit" value="Search" class="btn btn-primary btn-large btn-block" >
+                  </div>
+                <div class="control-group">
+					<a href="/login"><button type="button" class="btn btn-success" >Login</button></a>
+				</div>
+			    <br>
+			</div>
+		</div>
+	</div>
+</form>
+</body>
+
+</html>

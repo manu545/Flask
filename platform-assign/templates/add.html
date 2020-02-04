@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+<!-- Latest compiled and minified CSS -->
+
+<form action="/add" method="POST">
+	<div class="login">
+		<div class="login-screen">
+			<div class="app-title">
+				<h1>Add Train Details</h1>
+			</div>
+<!--{% if er==1 %}
+			<div class="alert alert-danger">
+  <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+</div>
+{%endif%}-->
+{% if er==1 %}
+
+ <script>
+    alert("Train number or Train name already exists");
+</script>
+{%endif%}
+
+            <div class="login-form">
+
+			<div class="login-form">
+				<div class="control-group">
+				<input type="number" class="login-field" value="" placeholder="Train number" name="tnum" required
+                data-fv-notempty-message="The username is required">
+				<label class="login-field-icon fui-user" ></label>
+				</div>
+
+				<div class="control-group">
+				<input type="text" class="login-field" value="" placeholder="Train name" name="tname" required>
+				<label class="login-field-icon fui-lock" ></label>
+				</div>
+
+                <div class="control-group">
+				<input type="number" class="login-field" value="" placeholder="platform" name="platform" required>
+				<label class="login-field-icon fui-lock" ></label>
+				</div>
+
+                <div class="control-group">
+				<input type="text" class="login-field" value="" placeholder="Time" name="time" required>
+				<label class="login-field-icon fui-lock" ></label>
+				</div>
+
+
+
+
+				<button type="submit" class="btn btn-success">Add</button>
+			    <br>
+			</div>
+		</div>
+	</div>
+</form>

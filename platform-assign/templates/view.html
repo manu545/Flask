@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+.rounded {
+  border-radius: 5px;
+
+   // without a background or border applied you won't be able to see if its rounded
+}
+</style>
+       <div class="container">
+           <div>
+               <h2>Train Details</h2>
+                <div class="btn-group">
+                <div class="input-group">
+
+                    <form action="/delete" method="POST">
+                        <div class="input-group">
+ <input type="text" class="rounded" value="" placeholder="Delete Train" name="delid">
+   <span class="input-group-btn">
+        <input type="submit" value="Delete" class="btn btn-danger" >
+   </span>
+                            </form>
+         <a href="/addt" class="btn btn-success">Add Train</a>
+        <a href="/logout" class="btn btn-warning">Logout</a>
+    </div>
+                </div></div>
+ </div><div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Train number</th>
+          <th>Train Name</th>
+        <th>Platform</th>
+        <th>Time</th>
+
+      </tr>
+    </thead>
+   <tbody>
+
+{% for j in range(k) %}
+
+      <tr>
+        <td>{{ name[j] }}</td>
+        <td>{{pa[j]}}</td>
+        <td>{{ em[j] }}</td>
+          <td>{{ tm[j]}}</td>
+
+
+          {%endfor%}
+
+
+
+      </tr>
+
+
+
+        <!--<td>Doe</td>
+        <td>john@example.com</td>-->
+
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
